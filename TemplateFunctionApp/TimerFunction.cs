@@ -11,6 +11,10 @@ namespace TemplateFunctionApp
         public static void Run([TimerTrigger("*/5 * * * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
+
+            log.LogError("This is an General Error, your favorite!");
+
+            throw new Exception("Another Genearl Error!");
         }
     }
 }
