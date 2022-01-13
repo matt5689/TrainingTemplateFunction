@@ -14,7 +14,8 @@ namespace TemplateFunctionApp
             databaseName: "databaseName",
             collectionName: "collectionName",
             ConnectionStringSetting = "ConnectionStrings:CosmosDBConnectionString",
-            LeaseCollectionName = "leases")]IReadOnlyList<Document> input, ILogger log)
+            LeaseCollectionName = "leases",
+            CreateLeaseCollectionIfNotExists = true)]IReadOnlyList<Document> input, ILogger log)
         {
             if (input != null && input.Count > 0)
             {
