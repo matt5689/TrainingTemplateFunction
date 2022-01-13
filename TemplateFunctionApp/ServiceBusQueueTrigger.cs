@@ -15,8 +15,8 @@ namespace TemplateFunctionApp
         {
             log.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
 
-            await serviceBusReturn.AddAsync("Item1");
-            await serviceBusReturn.AddAsync("Item2");
+            //await serviceBusReturn.AddAsync("Item1");
+            //await serviceBusReturn.AddAsync("Item2");
         }
     }
 }
