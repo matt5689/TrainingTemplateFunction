@@ -11,8 +11,8 @@ namespace TemplateFunctionApp
     {
         [FunctionName("CosmosDBTrigger")]
         public static void Run([CosmosDBTrigger(
-            databaseName: "databaseName",
-            collectionName: "collectionName",
+            databaseName: "database",
+            collectionName: "container",
             ConnectionStringSetting = "ConnectionStrings:CosmosDBConnectionString",
             LeaseCollectionName = "leases",
             CreateLeaseCollectionIfNotExists = true)]IReadOnlyList<Document> input, ILogger log)
